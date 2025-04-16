@@ -14,7 +14,7 @@
 #include <unistd.h>
 
 //place function prototypes here
-
+void FarStarTrader(void);
 
 void omarsUniqueFn(void);
 
@@ -89,6 +89,7 @@ int main(int argc, char *argv[])
 			case 11:
 			{
 				puts("room11");
+				FarStarTrader();
 				break;
 			}
 			case 12:
@@ -328,6 +329,12 @@ int main(int argc, char *argv[])
 }
 
 //place functions here
+
+void FarStarTrader(void)
+{
+	printf("cscuser11\n");
+}
+
 void omarsUniqueFn(void)
 {
 	printf("Omar");
