@@ -15,7 +15,7 @@
 
 //place function prototypes here
 
-
+void cameronDOOMFn(void);
 
 
 
@@ -70,6 +70,7 @@ int main(int argc, char *argv[])
 			case 7:
 			{
 				puts("room7");
+				cameronDOOMFn();
 				break;
 			}
 			case 8:
@@ -324,4 +325,7 @@ int main(int argc, char *argv[])
 
 //place functions here
 
-
+void cameronDOOMFn(void)
+{
+	printf("cscuser7/ Cameron");
+}
