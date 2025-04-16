@@ -1,6 +1,6 @@
 //contributors
 //GP
-//
+//Yoonhong Min
 //
 
 
@@ -15,7 +15,7 @@
 
 //place function prototypes here
 
-
+void room31(void);
 
 
 
@@ -190,6 +190,7 @@ int main(int argc, char *argv[])
 			case 31:
 			{
 				puts("room31");
+				room31();
 				break;
 			}
 			case 32:
@@ -323,5 +324,8 @@ int main(int argc, char *argv[])
 }
 
 //place functions here
-
+void room31(void)
+{
+	printf("Yoonhong Min ");
+}
 
