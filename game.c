@@ -15,7 +15,7 @@
 
 //place function prototypes here
 
-
+void kobesRoom(void);
 
 
 
@@ -155,6 +155,7 @@ int main(int argc, char *argv[])
 			case 24:
 			{
 				puts("room24");
+				kobesRoom();
 				break;
 			}
 			case 25:
@@ -324,4 +325,7 @@ int main(int argc, char *argv[])
 
 //place functions here
 
-
+void kobesRoom(void)
+{
+	printf("CSCUSER24\n");
+}
