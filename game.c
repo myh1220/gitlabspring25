@@ -17,7 +17,7 @@
 
 
 void omarsUniqueFn(void);
-
+void ryanRoom38(void);
 int main(int argc, char *argv[])
 {
 	int choice = 0;
@@ -219,6 +219,7 @@ int main(int argc, char *argv[])
 			case 38:
 			{
 				puts("room38");
+				ryanRoom38();
 				break;
 			}
 			case 39:
@@ -331,6 +332,11 @@ int main(int argc, char *argv[])
 void omarsUniqueFn(void)
 {
 	printf("Omar");
+}
+
+void ryanRoom38(void)
+{
+	printf("Ryan cscuser38\n");
 }
 
 
