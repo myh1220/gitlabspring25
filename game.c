@@ -16,8 +16,7 @@
 //place function prototypes here
 void FarStarTrader(void);
 
-
-
+void omarsUniqueFn(void);
 
 int main(int argc, char *argv[])
 {
@@ -308,6 +307,12 @@ int main(int argc, char *argv[])
 				puts("room55");
 				break;
 			}
+			case 61:
+			{
+				puts("room61");
+				omarsUniqueFn();
+				break;
+			}
 			case 99:
 			{
 				puts("You have escaped");
@@ -324,8 +329,16 @@ int main(int argc, char *argv[])
 }
 
 //place functions here
+
 void FarStarTrader(void)
 {
 	printf("cscuser11\n");
 }
+
+void omarsUniqueFn(void)
+{
+	printf("Omar");
+}
+
+
 
