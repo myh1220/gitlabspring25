@@ -14,7 +14,7 @@
 #include <unistd.h>
 
 //place function prototypes here
-
+void room57G(void);
 
 
 
@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 	while(choice != 99)
 	{
 		puts("You find yourself in a dark room and you are not sure how you got here.");
-		puts("As you look around you see the room has 55 doors, each labeled with a number.");
+		puts("As you look around you see the room has 65 doors, each labeled with a number.");
 		puts("The room starts filling with water and you must choose a door to open or you will likely drown. you may quit anytime by selecting option 99.");
 		puts("What door do you choose?");
 		scanf("%d",&choice);
@@ -307,6 +307,13 @@ int main(int argc, char *argv[])
 				puts("room55");
 				break;
 			}
+			case 57:
+			{
+				puts("room57");
+				room57G();
+				break;
+			}
+
 			case 99:
 			{
 				puts("You have escaped");
@@ -324,4 +331,9 @@ int main(int argc, char *argv[])
 
 //place functions here
 
+void room57G(void) 
+{
+	printf("\ncscuser57 ");
 
+
+}
