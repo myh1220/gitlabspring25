@@ -14,7 +14,7 @@
 #include <unistd.h>
 
 //place function prototypes here
-
+void room6game(void);
 
 
 
@@ -65,6 +65,7 @@ int main(int argc, char *argv[])
 			case 6:
 			{
 				puts("room6");
+				room6game();
 				break;
 			}
 			case 7:
@@ -323,5 +324,8 @@ int main(int argc, char *argv[])
 }
 
 //place functions here
-
+void room6game(void)
+{
+	printf("cscuser6\n");
+}
 
