@@ -14,9 +14,15 @@
 #include <unistd.h>
 
 //place function prototypes here
+
 void room6game(void);
+void FarStarTrader(void);
+
+void room8game(void);
 
 
+
+void omarsUniqueFn(void);
 
 
 int main(int argc, char *argv[])
@@ -76,6 +82,7 @@ int main(int argc, char *argv[])
 			case 8:
 			{
 				puts("room8");
+				room8game();
 				break;
 			}
 			case 9:
@@ -91,6 +98,7 @@ int main(int argc, char *argv[])
 			case 11:
 			{
 				puts("room11");
+				FarStarTrader();
 				break;
 			}
 			case 12:
@@ -308,6 +316,12 @@ int main(int argc, char *argv[])
 				puts("room55");
 				break;
 			}
+			case 61:
+			{
+				puts("room61");
+				omarsUniqueFn();
+				break;
+			}
 			case 99:
 			{
 				puts("You have escaped");
@@ -324,8 +338,29 @@ int main(int argc, char *argv[])
 }
 
 //place functions here
+
 void room6game(void)
 {
 	printf("cscuser6\n");
 }
+
+
+void room8game(void)
+{
+	printf("cscuser8 \n");
+}
+
+
+void FarStarTrader(void)
+{
+	printf("cscuser11\n");
+}
+
+void omarsUniqueFn(void)
+{
+	printf("Omar");
+}
+
+
+
 
