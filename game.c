@@ -18,6 +18,7 @@
 
 void omarsUniqueFn(void);
 void HubertRoom(void);
+
 int main(int argc, char *argv[])
 {
 	int choice = 0;
