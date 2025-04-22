@@ -188,6 +188,7 @@ int main(int argc, char *argv[])
 			case 28:
 			{
 				puts("room28");
+				room28game();
 				break;
 			}
 			case 29:
@@ -372,7 +373,9 @@ void omarsUniqueFn(void)
 	printf("Omar");
 }
 
-
-
+void room28game(void)
+{
+	printf("Cscuser28: Arturo");
+}
 
 
