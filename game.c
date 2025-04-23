@@ -96,13 +96,15 @@ void HubertRoom(void);
 void ryanRoom38(void);
 
 
+
+void kobesRoom(void);
+
 void angelasRoom26(void);
 
 
 void cameronDOOMFn(void);
 
 void lab13nanup(void);
-
 
 
 void Function23fbabonjo(void);
@@ -259,6 +261,7 @@ int main(int argc, char *argv[])
 			case 24:
 			{
 				puts("room24");
+				kobesRoom();
 				break;
 			}
 			case 25:
@@ -517,6 +520,12 @@ void room59game(void)
 }
 
 
+
+void kobesRoom(void)
+{
+	printf("CSCUSER24\n");
+}
+
 void room57G(void) 
 {
 	printf("\ncscuser57 ");
@@ -680,7 +689,5 @@ void room33game(void)
 {
 	printf("cscuser33\n");
 }
-
-
 
 
