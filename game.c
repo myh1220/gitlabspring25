@@ -73,6 +73,9 @@ void room17(void);
 
 
 void room8game(void);
+
+void room29game(void);
+
 void AzizHaouchineFn(void);
 
 
@@ -82,6 +85,7 @@ void room16game(void);
 void jessiesFunRoom(void);
 
 void vicCompRoom(void);
+
 
 
 void brentTestRoom(void);
@@ -282,6 +286,7 @@ int main(int argc, char *argv[])
 			case 29:
 			{
 				puts("room29");
+				room29game();
 				break;
 			}
 			case 30:
@@ -581,9 +586,15 @@ void room8game(void)
 	printf("cscuser8 \n");
 }
 
+
+void room29game(void)
+{
+	printf("cscuser29\n");
+}
 void room15game(void)
 {
 	printf("cscuser15 \n");
+
 }
 
 void FarStarTrader(void)
