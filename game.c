@@ -364,7 +364,7 @@ void room8game(void)
 
 void room29game(void)
 {
-	prinf("cscuser29\n");
+	printf("cscuser29\n");
 }
 
 void FarStarTrader(void)
