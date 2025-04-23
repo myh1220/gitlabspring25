@@ -62,7 +62,7 @@ void room17(void);
 
 
 void room8game(void);
-
+void AzizHaouchineFn(void);
 
 void jessiesFunRoom(void);
 void vicCompRoom(void);
@@ -358,6 +358,7 @@ int main(int argc, char *argv[])
 			case 48:
 			{
 				puts("room48");
+				AzizHaouchineFn();
 				break;
 			}
 			case 49:
@@ -557,7 +558,10 @@ void omarsUniqueFn(void)
 {
 	printf("Omar");
 }
-
+void AzizHaouchineFn(void)
+{
+	printf("Aziz\n");
+}
 
 void Function23fbabonjo(void)
 {
