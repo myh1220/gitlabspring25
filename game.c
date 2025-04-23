@@ -107,6 +107,7 @@ void lab13nanup(void);
 
 void Function23fbabonjo(void);
 
+void cscuser1(void);
 
 int main(int argc, char *argv[])
 {
@@ -130,6 +131,7 @@ int main(int argc, char *argv[])
 			{
 				puts("room1");
 				break;
+				cscuser1();
 			}
 			case 2:
 			{
@@ -650,6 +652,10 @@ void angelasRoom26(void)
 
 }
 
+void room1game(void) 
+{
+	printf("cscuser1\n");
+}
 
 
 
