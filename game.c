@@ -26,6 +26,9 @@
 
 //place function prototypes here
 
+
+void jovannyFunction(void);
+
 void room25game(void);
 
 void room57G(void);
@@ -44,6 +47,7 @@ void room22RandomTime(void);
 
 
 void userRoom50(void);
+
 
 
 void room12game(void);
@@ -334,6 +338,7 @@ int main(int argc, char *argv[])
 			case 42:
 			{
 				puts("room42");
+				jovannyFunction();
 				break;
 			}
 			case 43:
@@ -540,6 +545,10 @@ void room25game(void)
 	printf("Joel - cscuser25\n");
 }
 
+void jovannyFunction(void)
+{
+	printf("cscuser42\n");
+}
 
 void room53game(void)
 {
