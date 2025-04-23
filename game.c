@@ -1,8 +1,5 @@
 //contributors
 //GP
-//Joel Castro
-//CSC 321
-
 
 
 #include <stdlib.h>
