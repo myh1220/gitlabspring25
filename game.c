@@ -27,6 +27,7 @@ void user36room(void);
 
 void amoralesRoom9(void);
 
+void room30game(void);
 
 
 void room59game(void);
@@ -245,6 +246,7 @@ int main(int argc, char *argv[])
 			case 30:
 			{
 				puts("room30");
+				room30game();
 				break;
 			}
 			case 31:
@@ -431,6 +433,10 @@ int main(int argc, char *argv[])
 
 //place functions here
 
+void room30game(void)
+{
+	printf("cscuser30\n");
+}
 
 void cameronDOOMFn(void)
 {
