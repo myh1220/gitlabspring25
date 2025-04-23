@@ -1,6 +1,10 @@
 //contributors
 //GP
+
+//Yoonhong Min
+
 // Jessenia Hernandez Mora
+
 //
 
 
@@ -14,6 +18,9 @@
 #include <unistd.h>
 
 //place function prototypes here
+
+
+void room31(void);
 
 
 void room39game(void);
@@ -208,6 +215,7 @@ int main(int argc, char *argv[])
 			case 31:
 			{
 				puts("room31");
+				room31();
 				break;
 			}
 			case 32:
@@ -349,6 +357,12 @@ int main(int argc, char *argv[])
 }
 
 //place functions here
+
+void room31(void)
+{
+	printf("Yoonhong Min ");
+}
+
 void room39game(void)
 {
 	printf("Jess\n");
@@ -386,7 +400,6 @@ void lab13nanup(void)
 {
 	printf("nanu");
 }
-
 
 
 
