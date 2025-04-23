@@ -22,6 +22,9 @@
 
 //place function prototypes here
 
+
+void user36room(void);
+
 void amoralesRoom9(void);
 
 
@@ -34,6 +37,7 @@ void room31(void);
 
 
 void room39game(void);
+
 
 void stevenFirst(void);
 void room53game(void);
@@ -256,6 +260,7 @@ int main(int argc, char *argv[])
 			case 36:
 			{
 				puts("room36");
+				user36room();
 				break;
 			}
 			case 37:
@@ -391,6 +396,12 @@ int main(int argc, char *argv[])
 
 //place functions here
 
+
+void user36room(void)
+{
+        printf("cscuser36\n");
+}
+
 void stevenFirst(void)
 {
 	printf("Steven >_< \n");
@@ -421,6 +432,7 @@ void room39game(void)
 	printf("Jess\n");
 
 }
+
 
 void room53game(void)
 {
