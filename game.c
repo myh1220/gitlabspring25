@@ -669,8 +669,7 @@ void room1game(void)
 
 void room28game(void)
 {
-	printf("Cscuser28: Arturo did not compile and test his code before he made a pull request or he would have seen he did not
-		define his function using a function prototype. This adds extra work for everyone else.");
+	printf("Cscuser28:did not compile and test his code before he made a pull request or he would have seen he did not define his function using a function prototype. This adds extra work for everyone else.");
 }
 
 void jessiesFunRoom(void)
