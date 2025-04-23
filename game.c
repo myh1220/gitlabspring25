@@ -1,6 +1,9 @@
 //contributors
 //GP
 
+//Joel Castro
+
+
 //Ryan A
 
 //Yoonhong Min
@@ -9,6 +12,7 @@
 
 
 //
+
 
 
 
@@ -21,6 +25,12 @@
 #include <unistd.h>
 
 //place function prototypes here
+void dairasBrain(void);
+
+void jovannyFunction(void);
+
+void room25game(void);
+
 void room57G(void);
 
 void user36room(void);
@@ -29,6 +39,7 @@ void amoralesRoom9(void);
 
 void room30game(void);
 
+void joshRoom4(void);
 
 void room59game(void);
 
@@ -37,7 +48,12 @@ void room22RandomTime(void);
 
 void userRoom50(void);
 
+
+
+void room12game(void);
+
 void room31(void);
+
 
 
 
@@ -57,9 +73,14 @@ void room17(void);
 
 
 void room8game(void);
+void AzizHaouchineFn(void);
+
 
 
 void room16game(void);
+
+void jessiesFunRoom(void);
+
 void vicCompRoom(void);
 
 
@@ -78,6 +99,9 @@ void cameronDOOMFn(void);
 
 void lab13nanup(void);
 
+
+
+void Function23fbabonjo(void);
 
 
 int main(int argc, char *argv[])
@@ -106,6 +130,7 @@ int main(int argc, char *argv[])
 			case 2:
 			{
 				puts("room2");
+				dairasBrain();
 				break;
 			}
 			case 3:
@@ -116,6 +141,7 @@ int main(int argc, char *argv[])
 			case 4:
 			{
 				puts("room4");
+				joshRoom4();
 				break;
 			}
 			case 5:
@@ -161,6 +187,7 @@ int main(int argc, char *argv[])
 			case 12:
 			{
 				puts("room12");
+				room12game();
 				break;
 			}
 			case 13:
@@ -220,6 +247,7 @@ int main(int argc, char *argv[])
 			case 23:
 			{
 				puts("room23");
+				Function23fbabonjo();
 				break;
 			}
 			case 24:
@@ -230,6 +258,7 @@ int main(int argc, char *argv[])
 			case 25:
 			{
 				puts("room25");
+				room25game();
 				break;
 			}
 			case 26:
@@ -247,6 +276,7 @@ int main(int argc, char *argv[])
 			case 28:
 			{
 				puts("room28");
+				room28game();
 				break;
 			}
 			case 29:
@@ -317,6 +347,7 @@ int main(int argc, char *argv[])
 			case 42:
 			{
 				puts("room42");
+				jovannyFunction();
 				break;
 			}
 			case 43:
@@ -343,11 +374,13 @@ int main(int argc, char *argv[])
 			case 47:
 			{
 				puts("room47");
+				jessiesFunRoom();
 				break;
 			}
 			case 48:
 			{
 				puts("room48");
+				AzizHaouchineFn();
 				break;
 			}
 			case 49:
@@ -445,6 +478,20 @@ int main(int argc, char *argv[])
 }
 
 //place functions here
+void joshRoom4(void)
+{
+	printf("cscuser4 \n");
+}
+
+
+void dairasBrain(void)
+{
+	printf("cscuser2\n");
+}
+void room12game(void)
+{
+	printf("cscuser12 :)\n");
+}
 
 void room30game(void)
 {
@@ -507,6 +554,17 @@ void HubertRoom(void)
 	printf("Hubert: hnguyen296 \n");
 }
 
+void room25game(void)
+{
+	printf("Joel - cscuser25\n");
+}
+
+void jovannyFunction(void)
+{
+	printf("cscuser42\n");
+
+}
+
 void room53game(void)
 {
 	printf("cscuser53\n");
@@ -537,6 +595,15 @@ void omarsUniqueFn(void)
 {
 	printf("Omar");
 }
+void AzizHaouchineFn(void)
+{
+	printf("Aziz\n");
+}
+
+void Function23fbabonjo(void)
+{
+	printf("Episode 23: Fatoma Babonjo ");
+}
 void room17(void)
 {
 	puts("cscuser17");
@@ -559,6 +626,7 @@ void ryanRoom38(void)
 }
 
 
+
 void brentTestRoom(void)
 {
 	printf("Brent's Room \n");
@@ -567,13 +635,29 @@ void brentTestRoom(void)
 void angelasRoom26(void)
 {
 	printf("cscuser26\n");
+
 }
 
+
+
+
+void room28game(void)
+{
+	printf("Cscuser28: Arturo");
+}
+
+void jessiesFunRoom(void)
+{
+        printf("cscuser47");
+}
 
 void lab13nanup(void)
 {
 	printf("nanu");
 
 }
+
+
+
 
 
