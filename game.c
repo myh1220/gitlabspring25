@@ -25,7 +25,7 @@
 #include <unistd.h>
 
 //place function prototypes here
-
+void dairasBrain(void);
 
 void jovannyFunction(void);
 
@@ -124,6 +124,7 @@ int main(int argc, char *argv[])
 			case 2:
 			{
 				puts("room2");
+				dairasBrain();
 				break;
 			}
 			case 3:
@@ -474,6 +475,11 @@ void joshRoom4(void)
 	printf("cscuser4 \n");
 }
 
+
+void dairasBrain(void)
+{
+	printf("cscuser2\n");
+}
 void room12game(void)
 {
 	printf("cscuser12 :)\n");
@@ -548,6 +554,7 @@ void room25game(void)
 void jovannyFunction(void)
 {
 	printf("cscuser42\n");
+
 }
 
 void room53game(void)
