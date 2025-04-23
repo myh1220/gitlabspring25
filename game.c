@@ -48,7 +48,11 @@ void room8game(void);
 
 
 void omarsUniqueFn(void);
+
+void angelasRoom26(void);
+
 void lab13nanup(void);
+
 
 
 int main(int argc, char *argv[])
@@ -202,6 +206,7 @@ int main(int argc, char *argv[])
 			case 26:
 			{
 				puts("room26");
+				angelasRoom26();
 				break;
 			}
 			case 27:
@@ -425,12 +430,14 @@ void room17(void)
 }
 
 
+void angelasRoom26(void)
+{
+	printf("cscuser26\n");
+}
+
+
 void lab13nanup(void)
 {
 	printf("nanu");
 }
-
-
-
-
 
