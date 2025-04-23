@@ -28,6 +28,7 @@ void room8game(void);
 
 void omarsUniqueFn(void);
 
+void cscuser1(void);
 
 int main(int argc, char *argv[])
 {
@@ -51,6 +52,7 @@ int main(int argc, char *argv[])
 			{
 				puts("room1");
 				break;
+				cscuser1();
 			}
 			case 2:
 			{
@@ -372,6 +374,10 @@ void omarsUniqueFn(void)
 	printf("Omar");
 }
 
+void room1game(void) 
+{
+	printf("cscuser1\n");
+}
 
 
 
