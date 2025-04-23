@@ -28,7 +28,11 @@ void user36room(void);
 void amoralesRoom9(void);
 
 
+
+void room59game(void);
+
 void room22RandomTime(void);
+
 
 void userRoom50(void);
 
@@ -362,6 +366,14 @@ int main(int argc, char *argv[])
 				break;
 			}
 
+			case 59:
+			{
+				puts("room59");
+				room59game();
+				break;
+			}
+
+
 			case 57:
 			{
 				puts("room57");
@@ -376,6 +388,7 @@ int main(int argc, char *argv[])
 				stevenFirst();
 				break;
 			}
+
 
 			case 61:
 			{
@@ -409,6 +422,12 @@ int main(int argc, char *argv[])
 }
 
 //place functions here
+
+void room59game(void)
+{
+	printf("%s\n", "cscuser59");
+}
+
 
 void room57G(void) 
 {
@@ -450,6 +469,7 @@ void room39game(void)
 	printf("Jess\n");
 
 }
+
 
 
 void room53game(void)
