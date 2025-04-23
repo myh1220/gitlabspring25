@@ -21,7 +21,7 @@
 #include <unistd.h>
 
 //place function prototypes here
-
+void room57G(void);
 
 void user36room(void);
 
@@ -361,24 +361,38 @@ int main(int argc, char *argv[])
 				puts("room55");
 				break;
 			}
+
+			case 57:
+			{
+				puts("room57");
+				room57G();
+				break;
+			}
+
+
 			case 58:
 			{
 				puts("room58");
 				stevenFirst();
 				break;
 			}
+
 			case 61:
 			{
 				puts("room61");
 				omarsUniqueFn();
 				break;
 			}
+
+
+
 			case 62:
 			{
 				puts("room62");
 				brentTestRoom();
 				break;
 			}
+
 			case 99:
 			{
 				puts("You have escaped");
@@ -396,6 +410,10 @@ int main(int argc, char *argv[])
 
 //place functions here
 
+void room57G(void) 
+{
+	printf("\ncscuser57 ");
+}
 
 void user36room(void)
 {
@@ -477,4 +495,5 @@ void lab13nanup(void)
 	printf("nanu");
 
 }
+
 
