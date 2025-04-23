@@ -22,6 +22,9 @@
 
 //place function prototypes here
 
+void amoralesRoom9(void);
+
+
 void room22RandomTime(void);
 
 void userRoom50(void);
@@ -40,6 +43,7 @@ void FarStarTrader(void);
 
 
 void room8game(void);
+
 
 void brentTestRoom(void);
 
@@ -114,6 +118,7 @@ int main(int argc, char *argv[])
 			case 9:
 			{
 				puts("room9");
+				amoralesRoom9();
 				break;
 			}
 			case 10:
@@ -378,6 +383,11 @@ int main(int argc, char *argv[])
 
 //place functions here
 
+void amoralesRoom9(void)
+{
+	printf("cscuser9: anthony morales\n");
+}
+
 void room22RandomTime(void)
 {
 	printf("\nRyan - Room 22\n\n");
@@ -440,5 +450,6 @@ void angelasRoom26(void)
 void lab13nanup(void)
 {
 	printf("nanu");
+
 }
 
