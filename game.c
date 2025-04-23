@@ -59,9 +59,13 @@ void brentTestRoom(void);
 
 void omarsUniqueFn(void);
 
+void ryanRoom38(void);
+
+
 void angelasRoom26(void);
 
 void lab13nanup(void);
+
 
 
 
@@ -275,6 +279,7 @@ int main(int argc, char *argv[])
 			case 38:
 			{
 				puts("room38");
+				ryanRoom38();
 				break;
 			}
 			case 39:
@@ -499,6 +504,13 @@ void omarsUniqueFn(void)
 	printf("Omar");
 }
 
+
+void ryanRoom38(void)
+{
+	printf("Ryan cscuser38\n");
+}
+
+
 void brentTestRoom(void)
 {
 	printf("Brent's Room \n");
@@ -515,5 +527,6 @@ void lab13nanup(void)
 	printf("nanu");
 
 }
+
 
 
