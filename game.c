@@ -1,6 +1,9 @@
 //contributors
 //GP
 
+//Joel Castro
+
+
 //Ryan A
 
 //Yoonhong Min
@@ -9,6 +12,7 @@
 
 
 //
+
 
 
 
@@ -21,6 +25,9 @@
 #include <unistd.h>
 
 //place function prototypes here
+
+void room25game(void);
+
 void room57G(void);
 
 void user36room(void);
@@ -239,6 +246,7 @@ int main(int argc, char *argv[])
 			case 25:
 			{
 				puts("room25");
+				room25game();
 				break;
 			}
 			case 26:
@@ -525,6 +533,11 @@ void room39game(void)
 void HubertRoom(void)
 {
 	printf("Hubert: hnguyen296 \n");
+}
+
+void room25game(void)
+{
+	printf("Joel - cscuser25\n");
 }
 
 
