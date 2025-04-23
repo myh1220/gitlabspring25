@@ -83,6 +83,9 @@ void lab13nanup(void);
 
 
 
+void Function23fbabonjo(void);
+
+
 int main(int argc, char *argv[])
 {
 	int choice = 0;
@@ -223,6 +226,7 @@ int main(int argc, char *argv[])
 			case 23:
 			{
 				puts("room23");
+				Function23fbabonjo();
 				break;
 			}
 			case 24:
@@ -549,6 +553,11 @@ void omarsUniqueFn(void)
 	printf("Omar");
 }
 
+
+void Function23fbabonjo(void)
+{
+	printf("Episode 23: Fatoma Babonjo ");
+}
 void room17(void)
 {
 	puts("cscuser17");
@@ -565,6 +574,7 @@ void ryanRoom38(void)
 }
 
 
+
 void brentTestRoom(void)
 {
 	printf("Brent's Room \n");
@@ -573,6 +583,7 @@ void brentTestRoom(void)
 void angelasRoom26(void)
 {
 	printf("cscuser26\n");
+
 }
 
 
