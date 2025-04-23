@@ -35,6 +35,7 @@ void room31(void);
 
 void room39game(void);
 
+void stevenFirst(void);
 void room53game(void);
 
 
@@ -43,6 +44,7 @@ void FarStarTrader(void);
 
 
 void room8game(void);
+
 
 
 void brentTestRoom(void);
@@ -354,6 +356,12 @@ int main(int argc, char *argv[])
 				puts("room55");
 				break;
 			}
+			case 58:
+			{
+				puts("room58");
+				stevenFirst();
+				break;
+			}
 			case 61:
 			{
 				puts("room61");
@@ -382,6 +390,11 @@ int main(int argc, char *argv[])
 }
 
 //place functions here
+
+void stevenFirst(void)
+{
+	printf("Steven >_< \n");
+}
 
 void amoralesRoom9(void)
 {
