@@ -1,6 +1,6 @@
 //contributors
 //GP
-
+//Joel Castro
 
 #include <stdlib.h>
 #include <ctype.h>
@@ -344,7 +344,7 @@ int main(int argc, char *argv[])
 
 void room25game(void)
 {
-	printf("cscuser25\n");
+	printf("Joel - cscuser25\n");
 }
 
 
