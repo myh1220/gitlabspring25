@@ -314,7 +314,6 @@ int main(int argc, char *argv[])
 			case 33:
 			{
 				puts("room33");
-				room33game();
 				break;
 			}
 			case 34:
@@ -684,10 +683,5 @@ void lab13nanup(void)
 
 }
 
-
-void room33game(void)
-{
-	printf("cscuser33\n");
-}
 
 
