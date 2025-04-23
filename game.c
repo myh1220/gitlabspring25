@@ -58,7 +58,7 @@ void room17(void);
 
 void room8game(void);
 
-
+void vicCompRoom(void);
 
 void brentTestRoom(void);
 
@@ -346,6 +346,7 @@ int main(int argc, char *argv[])
 			case 49:
 			{
 				puts("room49");
+				vicCompRoom();
 				break;
 			}
 			case 50:
@@ -528,6 +529,10 @@ void room17(void)
 	puts("cscuser17");
 }
 
+void vicCompRoom(void)
+{
+        printf("cscuser49");
+}
 
 void ryanRoom38(void)
 {
