@@ -22,6 +22,12 @@
 
 //place function prototypes here
 
+
+void user36room(void);
+
+void amoralesRoom9(void);
+
+
 void room22RandomTime(void);
 
 void userRoom50(void);
@@ -32,6 +38,8 @@ void room31(void);
 
 void room39game(void);
 
+
+void stevenFirst(void);
 void room53game(void);
 
 
@@ -46,6 +54,8 @@ void room17(void);
 void room8game(void);
 
 
+
+void brentTestRoom(void);
 
 void omarsUniqueFn(void);
 
@@ -118,6 +128,7 @@ int main(int argc, char *argv[])
 			case 9:
 			{
 				puts("room9");
+				amoralesRoom9();
 				break;
 			}
 			case 10:
@@ -254,6 +265,7 @@ int main(int argc, char *argv[])
 			case 36:
 			{
 				puts("room36");
+				user36room();
 				break;
 			}
 			case 37:
@@ -354,10 +366,22 @@ int main(int argc, char *argv[])
 				puts("room55");
 				break;
 			}
+			case 58:
+			{
+				puts("room58");
+				stevenFirst();
+				break;
+			}
 			case 61:
 			{
 				puts("room61");
 				omarsUniqueFn();
+				break;
+			}
+			case 62:
+			{
+				puts("room62");
+				brentTestRoom();
 				break;
 			}
 			case 99:
@@ -376,6 +400,22 @@ int main(int argc, char *argv[])
 }
 
 //place functions here
+
+
+void user36room(void)
+{
+        printf("cscuser36\n");
+}
+
+void stevenFirst(void)
+{
+	printf("Steven >_< \n");
+}
+
+void amoralesRoom9(void)
+{
+	printf("cscuser9: anthony morales\n");
+}
 
 void room22RandomTime(void)
 {
@@ -397,6 +437,7 @@ void room39game(void)
 	printf("Jess\n");
 
 }
+
 
 void room53game(void)
 {
@@ -429,6 +470,10 @@ void room17(void)
 	puts("cscuser17");
 }
 
+void brentTestRoom(void)
+{
+	printf("Brent's Room \n");
+}
 
 void angelasRoom26(void)
 {
@@ -439,5 +484,6 @@ void angelasRoom26(void)
 void lab13nanup(void)
 {
 	printf("nanu");
+
 }
 
