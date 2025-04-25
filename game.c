@@ -1,15 +1,10 @@
 //contributors
 //GP
-
 //Joel Castro
-
-
 //Ryan A
-
 //Yoonhong Min
-
 // Jessenia Hernandez Mora
-
+//Gerard McCallion
 
 //
 
@@ -51,27 +46,19 @@ void userRoom50(void);
 
 
 void room12game(void);
-
 void room31(void);
-
-
-
-
 void room39game(void);
-
-
 void stevenFirst(void);
 void room53game(void);
-
-
 void room6game(void);
 void FarStarTrader(void);
-
-
 void room15game(void);
+//room 17
 void room17(void);
-
-
+void checkInventory17(char *arr[]);
+int whatToDo17(char location[], bool tableSeen, bool tableChecked, bool windowSeen);
+int coinToss17(void);
+//end room 17
 void room8game(void);
 
 void room29game(void);
@@ -105,12 +92,8 @@ void angelasRoom26(void);
 void cameronDOOMFn(void);
 
 void lab13nanup(void);
-
-
 void Function23fbabonjo(void);
-
 void cscuser1(void);
-
 int main(int argc, char *argv[])
 {
 	int choice = 0;
@@ -452,6 +435,7 @@ int main(int argc, char *argv[])
 			{
 				puts("room58");
 				stevenFirst();
+		
 				break;
 			}
 
@@ -628,9 +612,165 @@ void Function23fbabonjo(void)
 }
 void room17(void)
 {
-	puts("cscuser17");
-}
+	int decision = 0;
+	int cry = 0;
+	char location[] = "downstairs";
+	char *inventory[5] = {"Lighter", "Lucky Coin", NULL, NULL, NULL};
+	char *table[5] = {NULL, "Tie Pin", "Map", NULL, NULL};
+	bool escape = false;
+	bool tableSeen = false;
+	bool tableChecked = false;
+	bool windowSeen = false;
+	printf("Room 17!!\n");
+	printf("A rash decision, as the door slams shut you realize that there is no handle on this side.\n");
+	printf("A flight of stairs rises behind you, with a dim light emanating from the room above.\n");
+	printf("You need to take stock, get your bearings, and get out of here!\n");	
+	printf("What will you do?");
+	while(!escape){
+		whatToDo17(location, tableSeen, tableChecked, windowSeen);
+		scanf("%d",&decision);
+		switch(decision)
+			{
+			case 1:		//Cry for help
+				if(cry == 0)
+				{
+					printf("\nYou yell out, but the only response is the sound of running water.");	
+				}
+				else if(cry == 1)
+				{
+					printf("\nYou believe you heard something, but it was only an echo. Hope is fading.");
+				}
+				else
+				{
+					printf("\nEnough of your whining already, noone is coming to help.");	
+				}
+				cry +=1;			
+				break;
+			case 2:		//Examine Room
+				if(strcmp(location, "downstairs") == 0)
+				{
+					printf("There's a bucket in the corner, lets hope we are not here long enough to have to use that!\n");
+					tableSeen = true;
+					printf("A small table sits on the corner with a number of items");
 
+				}
+				else if(strcmp(location, "upstairs") == 0)
+				{
+					printf("The room is no bigger than the one you just left, but the air is fresher. There is a small\n");
+					printf("a small window in the far wall, an escape route perhaps?\n");
+					windowSeen = true;
+				}
+				break;
+			case 3: 
+				if(strcmp(location, "downstairs") == 0)
+				{
+					strcpy(location, "upstairs");
+				}
+				else if(strcmp(location, "upstairs") == 0)
+				{
+					strcpy(location, "downstairs");
+				}			
+				break;
+			case 4:
+				if(((strcmp(location, "downstairs") == 0) && !tableSeen) || ((strcmp(location, "upstairs") == 0) && !windowSeen))
+				{
+					if(coinToss17() == 0)
+					{
+						printf("Heads, thats not going to help.\n");
+					}					
+					else
+					{
+						printf("Tails, never fails");
+					}
+				}
+				else if((strcmp(location, "upstairs") == 0) && windowSeen)
+				{
+					printf("Its a tight fit, but you made it out.  As you scale down the pipe you think to yourself,\n");
+					printf("What good are these items going to do me now?\n");
+					printf("Then you realize, you are right back where you started...\n\n");
+					escape = true;
+				}
+                               	else if(((strcmp(location, "downstairs") == 0) && tableSeen) && tableChecked)
+                                {
+                                        printf("You take the items!\n");
+                                        for(int i = 0; i < 5; i++)
+					{
+						if(inventory[i] == NULL)
+						{
+						for(int j = 0; j < 5; j++)
+						{
+							if((table[j] != NULL) && (inventory[i] == NULL))
+							{
+								inventory[i] = table[j];
+								table[j] = NULL;
+							}
+						}
+						}                        
+	                                }
+				}
+				else if((strcmp(location, "downstairs") == 0) && tableSeen)
+				{
+					printf("On the table sits:\n");
+					checkInventory17(table);
+					tableChecked = true;
+				}
+				break;
+			case 5:
+				printf("You have: \n");
+				checkInventory17(inventory);
+				break;
+			}
+	}	
+
+}
+void checkInventory17(char *arr[])
+{	
+	for(int i = 0; i < 5; i++)
+        {
+                if(arr[i] != NULL)
+                {
+                        printf("%s\n", arr[i]);
+                }
+        }
+}
+int whatToDo17(char location[], bool tableSeen, bool tableChecked, bool windowSeen)
+{
+        printf("\n\nYou need to decide what to do:\n");
+        printf("1: Cry for help!!\n");
+        printf("2: Examine room\n");
+        printf("3: Go ");
+	if((strcmp(location, "upstairs") == 0) && windowSeen)
+        {
+                printf("downstairs\n");
+                printf("4: Escape through window!!\n");
+        }
+	else if(strcmp(location, "upstairs") == 0)
+	{
+		printf("downstairs\n");
+		printf("4: Toss Lucky Coin\n");
+	}
+	else if((strcmp(location, "downstairs") == 0) && tableSeen && tableChecked)
+        {
+                printf("upstairs\n");
+                printf("4: Take items\n");
+        }
+	else if((strcmp(location, "downstairs") == 0) && tableSeen)
+	{
+		printf("upstairs\n");
+		printf("4: Examine Table\n");
+	}
+	else
+	{
+		printf("upstairs\n");
+		printf("4: Toss Lucky Coin\n");
+	}
+	printf("5: Check inventory\n");
+}
+int coinToss17(void)
+{
+	int random = (rand() % (11));
+	return random%2;
+}
 void vicCompRoom(void)
 {
         printf("cscuser49");
