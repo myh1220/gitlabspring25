@@ -505,7 +505,280 @@ void room12game(void)
 
 void room30game(void)
 {
-	printf("cscuser30\n");
+	puts("The door creaks open and you step into what looks like your house."); 
+	puts("The door shuts abruptly behind you."); 
+	puts("Everything is very familiar to you. The semlls, your living room, and even some family pictures sitting on the coffee table."); 
+	puts("You sigh in relief until you look out the window and realize, your house is floating in outer space."); 
+	puts("You think to yourself: this can't be real.");
+	puts("There must be a way out of this... but how?");
+	
+	int decisionsCount = 0;
+	bool hasKey = false;
+	bool keyFound = false;
+	bool lookedOutWindow = false;
+	int outcome = rand() % 2;
+
+	while(decisionsCount < 5)
+	{
+		printf("\nWhat will you do?\n");
+		puts("1. Look out the window");
+		puts("2. Open the front door");
+		puts("3. Search the house");
+		puts("4. Sit on the couch and wait");
+		puts("5. Open the back door");
+		puts("6. Exit");
+
+		int choice;
+		scanf("%d", &choice);
+
+		switch(choice) 
+		{
+			case 1:
+				printf("\nYou look out the window next to the front door and spot a small space craft heading your way.\n");
+				puts("1. Signal it");
+				puts("2. Hide");
+				puts("3. Wave");
+
+				int subChoice;
+				scanf("%d", &subChoice);
+
+				if(subChoice == 1)
+				{
+					if(outcome)
+					{
+						lookedOutWindow = true;
+						puts("The ship flashes back a friendly signal, approaches the house, and then slowly descends behind the house.");	
+					}
+					else
+					{
+						puts("The ship turns away abruptly. Maybe you scared them off...");
+					}
+				}
+				else if(subChoice == 2) 
+				{	
+					puts("You hide for a couple minutes. When you look back out the window, the space craft is gone.");
+				}
+				else if(subChoice == 3)
+				{
+					if(outcome)
+					{
+						puts("You wave. The ship sees you and approaches the house. Before you know it, they fire at the house and you jump for cover.");
+						puts("You hide behind the couch and after a while the shooting dies down and you hear the ship fly off.");
+						puts("You get up and look around. The house is in the same condition as if nothing happened. Did you just imagine all of that?");
+						puts("Well at least you're okay.");
+					}
+					else
+					{
+						puts("You wave. The ship sees you and flies off.");
+					}
+				}
+				else
+				{
+					puts("You hesitated for too long. The opportunity has passed.");
+				}
+			
+				break;
+			case 2:
+				if(hasKey)
+				{
+					puts("You approach the door and insert the key into the lock. It clicks open! You swing the door open, walk through, and....");
+					return;
+				}
+				else
+				{
+					puts("You approach the door and attempt to open it. It's locked tight, but there's a keyhole. Maybe there's a key somewhere in the house?");
+				}
+
+				break;
+
+			case 3:
+				bool keepSearching = true;
+				char *bedroomEvents[] = {"Rummaging through your drawers, you find some of your old childhood toys.", "You look through your closet, and find a cool hat. You put it on.", "You look under your bed and a rat runs out at you!", "You find an old photo of yourself... standing outside this very house, but you don't remember this."};
+				char *kitchenEvents[] = {"You open the fridge and find a bowl of moldy yogurt.", "Rummaging the kitchen drawers, you find some spoons and forks.", "You open the oven and find a cooked turkey. It looks delicious!", "You search the cupboards. Just empty glasses and plates."};
+				char *basementEvents[] = {"You find a dusty box filled with some of your old clothes.", "You search some boxes, and find some family photo albums. They look normal enough...", "There's a mysterious hole in the wall, just big enough to put your hand through. You reach in and find... a crumpled piece of paper. You open it up and it reads: 'leave now'", "You search through some cabinets and drawers. You only find random junk."};
+
+				while(keepSearching)
+				{
+					printf("\nYou want to search the house.. where should you go?\n");
+					puts("1. Your bedroom");
+					puts("2. The kitchen");
+					puts("3. The basement");
+
+					int searchChoice;
+					scanf("%d", &searchChoice);
+					int chance = rand() % 3;
+					int event = rand() % 4;
+
+					if(searchChoice == 1)
+					{
+						int chance = rand() % 3;
+						int event = rand() % 4;
+						puts("You search your bedroom...");
+						if(chance == 1 && !keyFound)
+						{
+							puts("You look behind your bed, you find a rusty key! But what does it open?");
+							hasKey = true;
+							keyFound = true;
+						}
+						else
+						{
+							puts(bedroomEvents[event]);
+							puts("Nothing else here.");
+						}
+							
+						puts("Would you like to keep searching?");
+						puts("1. Keep searching");
+						puts("2. Stop searching");
+
+						int choice;
+						scanf("%d", &choice);
+						if(choice == 1)
+						{
+							puts("You head back.");
+						}
+						else
+						{
+							keepSearching = false;
+						}
+						
+					}
+					else if(searchChoice == 2)
+					{
+						int chance = rand() % 3;
+						int event = rand() % 4;
+						puts("You search the kitchen...");
+						if(chance == 1 && !keyFound)
+						{
+							puts("You look under the kitchen table, and you find something taped there; it's a rusty key! But what does it open?");
+							hasKey = true;
+							keyFound = true;
+						}
+						else
+						{
+							puts(kitchenEvents[event]);
+							puts("Nothing else here.");
+						}
+						
+						puts("Would you like to keep searching?");
+						puts("1. Keep searching");
+						puts("2. Stop searching");
+							
+						int choice;
+						scanf("%d", &choice);
+						if(choice == 1)
+						{
+							puts("You head back.");
+						}
+						else
+						{
+							keepSearching = false;
+						}
+						
+					}
+					else if(searchChoice == 3)
+					{
+						int chance = rand() % 3;
+						int event = rand() % 4;
+						puts("You search the basement...");
+						if(chance == 1 && !keyFound)
+						{
+							puts("You search some filing cabinets. There's one folder with something in it; a rusty key! But what does it open?");
+							hasKey = true;
+							keyFound = true;
+						}
+						else
+						{
+							puts(basementEvents[event]);
+							puts("Nothing else here.");
+						}
+
+						puts("Would you like to keep searching?");
+						puts("1. Keep searching");
+						puts("2. Stop searching");
+
+						int choice;
+						scanf("%d", &choice);
+						if(choice == 1)
+						{
+							puts("You head back.");
+						}
+						else
+						{
+							keepSearching = false;
+						}
+						
+					}
+					else
+					{
+						break;
+					}
+				
+				}
+				
+				break;
+
+			case 4:
+				printf("\nYou choose to sit and wait. Who knows, maybe someone will show up to rescue you...\n");
+				int chance = rand() % 100;
+			
+				if(chance == 0 && !hasKey) {
+					puts("*clink* - something just fell from the ceiling and landed in your lap: a key!");
+					keyFound = true;
+					hasKey = true;
+				}
+				else
+				{
+					puts("Some time passes and nothing happens. You feel a little more tired.");
+				}
+
+				break;
+
+			case 5:
+				printf("\nYou appraoch the back of the house and attempt to open the door.\n");
+
+				if(lookedOutWindow && hasKey)
+				{
+					puts("You insert the key and the door clicks open.");
+					puts("You step out to find the space craft with it's hatch open...");
+					puts("Maybe this is your chance to escape.");
+					
+					puts("Will you enter the space craft or head back into the house?");
+					puts("1. Enter the space craft");
+					puts("2. Head back into the house");
+
+					int shipChoice;
+					scanf("%d", &shipChoice);
+
+					if(shipChoice == 1)
+					{
+						puts("You approach the open hatch and walk up the stairs. It's pitch black and you feel a cold chill coming from inside.");
+						puts("Just as you take your first step inside a bright light flashes you and...");
+						return;
+					}
+					else
+					{
+						break;
+					}
+				}
+				else
+				{
+					puts("The door is locked. Maybe there's a key lying around somewhere in the house.");
+				}
+
+				break;
+
+			case 6:
+				return;
+
+			default:
+				printf("\nInvalid choice. Try again.\n");
+				break;
+		}
+			decisionsCount++;
+	}
+
+	return;
+
 }
 
 void cameronDOOMFn(void)
