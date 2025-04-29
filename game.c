@@ -216,7 +216,6 @@ int main(int argc, char *argv[])
 			}
 			case 16:
 			{
-				puts("room16");
 				room16game();
 				break;
 			}
@@ -638,7 +637,50 @@ void vicCompRoom(void)
 
 void room16game(void)
 {
-	printf("cscuser16\n");
+	srand(time(NULL));
+
+	char* ingredients[] = {"Gatorade", "Caffeine", "Tears", "Blood", "Goat Hair", "Wilt Chamberlain's nail clippings"};
+	int numOfIngredients = 6;
+	int attemptsBeforeDrowning = 4;
+	
+	printf("\nYou've entered Elon Musk's Lab Room!\n");
+	printf("To have a chance at escaping, you must recreate 'Michael's Secret Stuff'\n\n");
+	
+	while (true)
+	{	
+		printf("Choose from one of the following:\n");
+		printf("1. Take a close look at the vials\n");
+		printf("2. Look at Phil Jackson's play book\n");
+		printf("3. Call Scotty Pippen for help\n");
+		printf("4. See what you're working with\n");
+		printf("5. Try a mix of ingredients\n");
+		printf("6. I give up, take me back to the original room.\n");
+
+		int userChoice;
+		printf("Enter: ");
+		scanf("%d", &userChoice);
+
+		if (userChoice == 6)
+		{
+			printf("Returning to main room, hope you know how to swim!\n");
+			break;
+		}
+
+		switch (userChoice)
+		{
+			case 1:
+			{
+				int pickedVial = rand() % numOfIngredients;
+				printf("There's something off about this vial, must be a clue!\n");
+			}
+
+			default:
+			{
+				printf("Incorrect choice, try again\n");
+			}
+	
+		}
+	}
 }
 
 
