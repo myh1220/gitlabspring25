@@ -605,7 +605,8 @@ void user36Cafe(void)
 						printf("\nThere is no good word for the opposite of lonesome. One might be tempted to suggest togetherness or contentment, but the fact that these two other words bear definitions unrelated to each other perfectly displays why lonesome cannot be properly mirrored. It does not mean solitude, nor alone, nor lonely, although lonesome can contain all of those words in itself. Lonesome means a state of being apart. Of being other. Alone-some.” ― Blue Lily, Lily Blue, Maggie Stiefvater\n");
                                                 break;                                                                                     
 					case 5:                                                                                                    
-						printf("\nThe more I read, the more I learn, the more I discover that I know nothing. - Frankenstein, Mary Shelley\n");                                                                               break;
+						printf("\nThe more I read, the more I learn, the more I discover that I know nothing. - Frankenstein, Mary Shelley\n"); 
+						break;
                                         case 6:
                                                 printf("\nEven strength must bow down to wisdom sometimes. - Percy Jackson, Rick Riordan\n");
                                                 break;
@@ -615,8 +616,7 @@ void user36Cafe(void)
                                         case 8:
                                                 printf("\nI’m angry. I just don’t give in to it. Stuff happens all the time. What’d you call it? Outrageous. Outrageous stuff make you so mad you can just burn yourself up with it. You got to decide if the mad runs you, or you run the mad. - Body and Soul, Frank Conroy\n");
                                         case 9:
-                                                printf("\nNowadays people know the price of everything and the value of nothing - The Picture of Dorian Gray, Oscar Wilde\n");                                                                default:                                                                                                   printf("\n Just keep swimming. - Dory\n"); //this one shouldn't work, i think
-                                                break;                                                                             
+                                                printf("\nNowadays people know the price of everything and the value of nothing - The Picture of Dorian Gray, Oscar Wilde\n");                                                                               
  					default:                                                                                                   
 						printf("\n Just keep swimming. - Dory\n"); //this one shouldn't work, i think
                                                 break;                                                                             
