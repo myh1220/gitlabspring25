@@ -323,7 +323,7 @@ int main(int argc, char *argv[])
 			}
 			case 36:
                         {
-                                puts("Welcome to Cafe 36! :)");
+                                puts("Entering Cafe 36! :)");
                                 user36Cafe();
                                 break;
                         }
