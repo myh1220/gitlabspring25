@@ -13,7 +13,7 @@
 
 //
 
-
+//Jesse Navarro
 
 
 #include <stdlib.h>
@@ -505,19 +505,30 @@ void room12game(void)
 
 void room30game(void)
 {
-	printf("\nThe door creaks open and you step into what looks like your house.\n"); 
-	puts("The door shuts abruptly behind you."); 
-	puts("Everything is very familiar to you. The semlls, your living room, and even some family pictures sitting on the coffee table."); 
-	puts("You sigh in relief until you look out the window and realize, your house is floating in outer space."); 
-	puts("You think to yourself: this can't be real.");
-	puts("There must be a way out of this... but how?");
-	
 	bool hasKey = false;
 	bool keyFound = false;
 	bool lookedOutWindow = false;
 	bool hasSeenShip = false;
 	bool superPower = false;
+
+	char *bedroomEvents[] = {"Rummaging through your drawers, you find some of your old childhood toys.", "You look through your closet, and find a cool hat. You put it on.", "You look under your bed and a rat runs out at you!", "You find an old photo of yourself... standing outside this very house, but you don't remember this."};
+	char *kitchenEvents[] = {"You open the fridge and find a bowl of moldy yogurt.", "Rummaging the kitchen drawers, you find some spoons and forks.", "You open the oven and find a cooked turkey. It looks delicious!", "You search the cupboards. Just empty glasses and plates."};
+	char *basementEvents[] = {"You find a dusty box filled with some of your old clothes.", "You search some boxes, and find some family photo albums. They look normal enough...", "There's a mysterious hole in the wall, just big enough to put your hand through. You reach in and find... a crumpled piece of paper. You open it up and it reads: 'leave now'", "You search through some cabinets and drawers. You only find random junk."};
+
 	int outcome = rand() % 2;
+	int keyChance = rand() % 3;
+	int chance;
+	int choice;
+	int subChoice;
+	int foodChoice;
+	int event;
+
+	printf("\nThe door creaks open and you step into what looks like your house.\n");
+	puts("The door shuts abruptly behind you.");
+	puts("Everything is very familiar to you. The semlls, your living room, and even some family pictures sitting on the coffee table. You are home.");
+	puts("You sigh in relief until you look out the window and realize, your house is floating in outer space.");
+	puts("You think to yourself: this can't be real.");
+	puts("There must be a way out of this... but how?");
 
 	while(true)
 	{
@@ -528,9 +539,9 @@ void room30game(void)
 		puts("4. Sit on the couch and wait");
 		puts("5. Open the back door");
 		puts("6. (Exit to main menu)");
-
-		int choice;
 		scanf("%d", &choice);
+
+		bool keepSearching = true;
 
 		switch(choice) 
 		{
@@ -541,10 +552,7 @@ void room30game(void)
 					puts("1. Signal it");
 					puts("2. Hide");
 					puts("3. Wave");
-	
-					int subChoice;
 					scanf("%d", &subChoice);
-
 					printf("\n");
 
 					if(subChoice == 1)
@@ -598,25 +606,21 @@ void room30game(void)
 					puts("What will you do?");
 					puts("1. Walk through");
 					puts("2. Turn back");
-
-					int hallwayChoice;
-
-					scanf("%d", &hallwayChoice);
-						
+					scanf("%d", &subChoice);
 					printf("\n");
 
-					if(hallwayChoice == 1)
+					if(subChoice == 1)
 					{
 						puts("You walk through. You keep walking for a couple minutes until you can barely see the light seeping from the door behind you...\n");
 						puts("What do you do?");
 						puts("1. Keep going");
 						puts("2. Turn back");
 
-						scanf("%d", &hallwayChoice);
+						scanf("%d", &subChoice);
 
 						printf("\n");
 
-						if(hallwayChoice == 1)
+						if(subChoice == 1)
 						{
 							puts("You continue walking for a couple more minutes until...\n");
 							return;
@@ -640,28 +644,18 @@ void room30game(void)
 				break;
 
 			case 3:
-				bool keepSearching = true;
-				char *bedroomEvents[] = {"Rummaging through your drawers, you find some of your old childhood toys.", "You look through your closet, and find a cool hat. You put it on.", "You look under your bed and a rat runs out at you!", "You find an old photo of yourself... standing outside this very house, but you don't remember this."};
-				char *kitchenEvents[] = {"You open the fridge and find a bowl of moldy yogurt.", "Rummaging the kitchen drawers, you find some spoons and forks.", "You open the oven and find a cooked turkey. It looks delicious!", "You search the cupboards. Just empty glasses and plates."};
-				char *basementEvents[] = {"You find a dusty box filled with some of your old clothes.", "You search some boxes, and find some family photo albums. They look normal enough...", "There's a mysterious hole in the wall, just big enough to put your hand through. You reach in and find... a crumpled piece of paper. You open it up and it reads: 'leave now'", "You search through some cabinets and drawers. You only find random junk."};
-
-				int keyChance = rand() % 3;
-
 				while(keepSearching)
 				{
 					printf("\nYou want to search the house.. where should you go?\n");
 					puts("1. Your bedroom");
 					puts("2. The kitchen");
 					puts("3. The basement");
-
-					int searchChoice;
-					scanf("%d", &searchChoice);
-
+					scanf("%d", &subChoice);
 					printf("\n");
 
-					if(searchChoice == 1)
+					if(subChoice == 1)
 					{
-						int event = rand() % 4;
+						event = rand() % 4;
 						puts("You search your bedroom...");
 						if(keyChance == 0 && !keyFound)
 						{
@@ -678,10 +672,9 @@ void room30game(void)
 						printf("\nWould you like to keep searching?\n");
 						puts("1. Keep searching");
 						puts("2. Stop searching");
+						scanf("%d", &subChoice);
 
-						int choice;
-						scanf("%d", &choice);
-						if(choice == 1)
+						if(subChoice == 1)
 						{
 							puts("You head back.");
 						}
@@ -691,9 +684,9 @@ void room30game(void)
 						}
 						
 					}
-					else if(searchChoice == 2)
+					else if(subChoice == 2)
 					{
-						int event = rand() % 4;
+						event = rand() % 4;
 						puts("You search the kitchen...");
 						if(keyChance == 1 && !keyFound)
 						{
@@ -711,9 +704,8 @@ void room30game(void)
 						puts("1. Keep searching");
 						puts("2. Stop searching");
 							
-						int choice;
-						scanf("%d", &choice);
-						if(choice == 1)
+						scanf("%d", &subChoice);
+						if(subChoice == 1)
 						{
 							puts("You head back.");
 						}
@@ -723,9 +715,9 @@ void room30game(void)
 						}
 						
 					}
-					else if(searchChoice == 3)
+					else if(subChoice == 3)
 					{
-						int event = rand() % 4;
+						event = rand() % 4;
 						puts("You search the basement...");
 						if(keyChance == 2 && !keyFound)
 						{
@@ -743,9 +735,8 @@ void room30game(void)
 						puts("1. Keep searching");
 						puts("2. Stop searching");
 
-						int choice;
-						scanf("%d", &choice);
-						if(choice == 1)
+						scanf("%d", &subChoice);
+						if(subChoice == 1)
 						{
 							puts("You head back.");
 						}
@@ -766,7 +757,7 @@ void room30game(void)
 
 			case 4:
 				printf("\nYou choose to sit and wait. Who knows, maybe something will happen...\n");
-				int chance = rand() % 100;
+				chance = rand() % 100;
 			
 				if(chance == 0 && !hasKey) {
 					puts("*clink* - something just fell from the ceiling and landed in your lap: a key!");
@@ -782,26 +773,21 @@ void room30game(void)
 					puts("2. Get something to eat");
 					puts("3. Take a nap");
 					puts("4. Something else");
+					scanf("%d", &subChoice);
 
-					int waitingChoice;
-					scanf("%d", &waitingChoice);
-
-					if(waitingChoice == 1)
+					if(subChoice == 1)
 					{
 						puts("You turn the TV on and there's nothing but static.");
 						puts("You watch the static for a while before getting bored.");
 					}
-					else if(waitingChoice == 2)
+					else if(subChoice == 2)
 					{
 						printf("\nYou go to the kitchen and find a couple of options:\n");
 						puts("1. Turkey");
 						puts("2. Spoiled yogurt");
 						puts("3. Glowing water");
 						puts("4. Nothing sounds good");
-
-						int foodChoice;
 						scanf("%d", &foodChoice);
-						
 						printf("\n");
 
 						if(foodChoice == 1)
@@ -822,7 +808,7 @@ void room30game(void)
 							break;
 						}
 					}
-					else if(waitingChoice == 3)
+					else if(subChoice == 3)
 					{
 						puts("You take a quick nap. Hopefully nothing bad happnens while you're asleep...");
 						puts("You wake up after a while and feel well-rested. Everything seems to be okay.");
@@ -849,12 +835,11 @@ void room30game(void)
 					puts("1. Enter the space craft");
 					puts("2. Head back into the house");
 
-					int shipChoice;
-					scanf("%d", &shipChoice);
+					scanf("%d", &subChoice);
 
 					printf("\n");
 
-					if(shipChoice == 1)
+					if(subChoice == 1)
 					{
 						puts("You approach the open hatch and walk up the stairs. It's pitch black and you feel a cold chill coming from inside.");
 						puts("Just as you take your first step inside a bright light flashes you and...\n");
@@ -878,6 +863,7 @@ void room30game(void)
 				break;
 
 			case 6:
+				puts("Leaving room 30...\n");
 				return;
 
 			default:
