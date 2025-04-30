@@ -98,6 +98,10 @@ void cameronDOOMFn(void);
 void lab13nanup(void);
 void Function23fbabonjo(void);
 void cscuser1(void);
+
+
+void PedroFunctionRoom(void);
+
 int main(int argc, char *argv[])
 {
 	int choice = 0;
@@ -318,6 +322,7 @@ int main(int argc, char *argv[])
 			case 37:
 			{
 				puts("room37");
+				PedroFunctionRoom();
 				break;
 			}
 			case 38:
@@ -1859,6 +1864,34 @@ void angelasRoom26(void)
 void room1game(void) 
 {
 	printf("cscuser1\n");
+}
+
+void PedroFunctionRoom(void)
+{
+	int opt37 = 0;
+	puts("You have picked room 37, Pedro's room\n");
+	puts("Let's start by visiting some planets in our solar system\n");
+	puts("You have 3 planets to visit from\n");
+	puts("1. Mercury, 2. Mars, 3. Saturn");
+	scanf("%d", &opt37);
+
+	//This if statement is temporary. Only a bases to work with
+	if(opt37 = 1)
+	{
+		printf("Great you picked Mercury\n");
+
+	}
+	else if(opt37 = 2)
+	{
+		printf("Great you picked Mars\n");
+	
+	}
+	else if(opt37 = 3)
+	{
+		printf("Great you picked Saturn");
+	
+	}
+
 }
 
 
