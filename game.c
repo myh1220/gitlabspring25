@@ -1655,7 +1655,86 @@ void FarStarTrader(void)
 
 void omarsUniqueFn(void)
 {
-	printf("Omar");
+		printf("\n=== THE ANCIENT KEYBOARD OF DESTINY ===\n\n");
+	printf("As you enter Room 61, the heavy stone door slams shut behind you.\n");
+	printf("Torches ignite along the walls, revealing an ancient chamber.\n");
+	printf("In the center stands a pedestal with a mystical keyboard glowing with arcane runes.\n\n");
+
+	printf("A ghostly voice echoes: \"Traveler, to escape this chamber, you must prove\n");
+	printf("your worth by mastering the Keyboard of Destiny. Five trials await you.\"\n\n");
+
+	printf("\"Each correct keystroke channels the ancient magic. Fail, and the consequences may be... unpleasant.\"\n\n");
+
+	printf("You approach the keyboard, hands trembling slightly...\n\n");
+	sleep(1); // Short dramatic pause
+
+	char keys[] = {'a', 's', 'd', 'f', 'j', 'k', 'l', ';'};
+	int numKeys = sizeof(keys) / sizeof(keys[0]);
+	int score = 0;
+	int round;
+	int health = 3; // RPG health points
+
+	// Clear input buffer before starting
+	while (getchar() != '\n');
+
+	for (round = 1; round <= 5 && health > 0; ++round) {
+		int idx = rand() % numKeys;
+		char target = keys[idx];
+		char input[10];
+
+		printf("\nTRIAL %d: The rune '%c' glows brightly on the keyboard!\n", round, target);
+		printf("Your fingers hover over the keys. Press '%c' to channel its magic! > ", target);
+		fgets(input, sizeof(input), stdin);
+
+		// Remove newline if present
+		if (input[strlen(input)-1] == '\n') input[strlen(input)-1] = '\0';
+
+		// Check if input matches target
+		if (strlen(input) == 1 && input[0] == target) {
+			printf("\nThe rune flashes with brilliant light! Magic surges through the chamber!\n");
+			printf("You feel power coursing through your veins as you successfully channel the ancient magic.\n");
+			score++;
+
+			// Different success messages based on the round
+			switch(round) {
+				case 1: printf("A spectral shield briefly materializes around you.\n"); break;
+				case 2: printf("The temperature in the room grows pleasantly warm.\n"); break;
+				case 3: printf("Ghostly butterflies flutter around the room in celebration.\n"); break;
+				case 4: printf("A soothing melody begins playing from unseen instruments.\n"); break;
+				case 5: printf("Golden light fills the chamber, and the air smells of honey and spice.\n"); break;
+			}
+		} else {
+			printf("\nThe rune turns blood red and emits a painful shock!\n");
+			printf("You pressed '%s' instead of '%c' - dark energy crackles around you!\n", input, target);
+			health--;
+
+			if (health > 0) {
+				printf("The ghostly voice sighs: \"Disappointing. You have %d life force remaining.\"\n", health);
+			} else {
+				printf("The voice booms: \"You have failed the final challenge!\"\n");
+			}
+		}
+	}
+
+	printf("\n=== THE TRIALS CONCLUDE ===\n\n");
+
+	if (health <= 0) {
+		printf("Drained of energy, you collapse to your knees. The chamber grows dark...\n");
+		printf("Just as you fear the worst, a hidden door opens, revealing a passage back to the main hall.\n");
+		printf("The voice speaks one final time: \"You survive... barely. Perhaps you will return stronger.\"\n");
+	} else if (score == 5) {
+		printf("The keyboard hums with power as all five runes glow in perfect harmony!\n");
+		printf("\"EXCEPTIONAL!\" the voice booms. \"Few have mastered all trials of the Ancient Keyboard.\"\n");
+		printf("A secret compartment opens, revealing a small treasure chest with mystical artifacts.\n");
+		printf("You take a moment to rest before returning to your journey, enriched by this experience.\n");
+	} else {
+		printf("The ancient keyboard powers down, the runes fading to a soft glow.\n");
+		printf("\"You have passed %d of the 5 trials,\" the voice intones. \"Not perfect, but acceptable.\"\n", score);
+		printf("A door slides open in the wall, allowing you to continue your adventure.\n");
+	}
+
+	printf("\nYou leave Room 61 behind, carrying the memory of the Ancient Keyboard of Destiny.\n");
+	printf("May your fingers be nimble in your future encounters, traveler...\n\n");
 }
 void AzizHaouchineFn(void)
 {
